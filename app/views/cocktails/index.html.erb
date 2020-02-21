@@ -4,7 +4,6 @@
   <div class="card-product">
     <div class="card-product-infos">
       <h2><% @cocktails.each do |cocktail| %>
-        <img src="https://mixthatdrink.com/wp-content/uploads/2009/04/sex-on-the-beach-recipe-750x1125.jpg" width="400" height="500"/>
         <div><%= link_to cocktail.name, cocktail_path(cocktail) %><div>
       <% end %></h2>
     </div>
