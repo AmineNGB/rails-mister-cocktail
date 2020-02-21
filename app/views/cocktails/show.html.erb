@@ -1,8 +1,12 @@
 <h1><%= @cocktail.name %></h1>
 
+<div class=" container card-category p-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo.key, crop: :thumb, gravity: :face %>')">
+</div>
+
+
 <div class="container">
   <% @cocktail.doses.each do |dose| %>
-    <p><%= dose.description %> - Ingredient: <%= dose.ingredient.name %> <%= link_to 'delete', dose_path(dose), method: :delete %></p>
+      <p><%= dose.description %> <%= dose.ingredient.name %> <%= link_to 'delete', dose_path(dose), method: :delete %></p>
   <% end %>
 </div>
 

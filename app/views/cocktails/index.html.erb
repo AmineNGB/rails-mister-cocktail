@@ -1,8 +1,8 @@
 <h1>List of Cocktails</h1>
   <div class="flex">
-    <div class="cards d-flex flex-wrap justify-content-around p-2" style="height: 200px">
+    <div class="cards" style="height: 200px">
       <% @cocktails.each do |cocktail| %>
-        <div class="card-category col-lg-3 col-md-6 col-sm-12" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail(13 kB)');">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.key %>')">
           <%= link_to cocktail.name, cocktail_path(cocktail), class: 'card-link' %>
         </div>
       <% end %>
